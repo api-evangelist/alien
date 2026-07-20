@@ -1,0 +1,35 @@
+generated: '2026-07-17'
+method: searched
+source: https://sso.alien-api.com/.well-known/openid-configuration
+docs: https://docs.alien.org/sso-guide/oauth2-clients
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode, refreshToken]
+  pkce: required
+  pkce_methods: [S256]
+  token_binding: DPoP (RFC 9449, EdDSA)
+  client_type: public
+  token_endpoint_auth_methods: [none]
+schemes:
+- name: AlienSSO
+  type: openIdConnect
+  openIdConnectUrl: https://sso.alien-api.com/.well-known/openid-configuration
+  issuer: https://sso.alien-api.com
+  source: https://sso.alien-api.com/.well-known/openid-configuration
+- name: OAuth2
+  type: oauth2
+  source: https://sso.alien-api.com/.well-known/oauth-authorization-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://sso.alien-api.com/oauth/authorize
+    tokenUrl: https://sso.alien-api.com/oauth/token
+    scopes:
+      openid: OpenID Connect authentication (proof-of-humanity subject)
+  grant_types: [authorization_code, refresh_token]
+notes: >-
+  Alien SSO is an OpenID Connect / OAuth 2.0 identity provider that proves human
+  uniqueness rather than legal identity. Public clients only (token_endpoint_auth
+  none) with mandatory PKCE (S256). Access tokens may be sender-constrained with
+  DPoP (RFC 9449, EdDSA). ID tokens are RS256-signed; public keys at
+  https://sso.alien-api.com/oauth/jwks. Backend services verify Alien Agent ID
+  tokens (Ed25519) via @alien-id/sso-agent-id. Any standard OIDC library works.
