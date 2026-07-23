@@ -1,0 +1,35 @@
+generated: '2026-07-17'
+method: searched
+source: https://docs.alien.org
+families:
+- family: SSO UI
+  description: Prebuilt sign-in UI for adding Alien SSO to a React app.
+  loader: '@alien-id/sso-react'
+  components:
+  - name: SignInButton
+    description: Drop-in "Sign in with Alien ID" button.
+  - name: AlienSsoProvider
+    description: React context provider wiring the useAuth hook and token lifecycle.
+- family: Solana SSO UI
+  description: Wallet-linking sign-in components for Solana apps.
+  loader: '@alien-id/sso-solana-react'
+  components:
+  - name: AlienSolanaSsoProvider
+    description: React provider for Solana wallet linking to a verified Alien ID.
+  - name: useSolanaAuth
+    description: Hook exposing Solana sign-in state and actions.
+- family: Mini Apps UI kit
+  description: UI component kit for building native-like Alien Mini Apps.
+  loader: '@alien-id/ui-kit-react'
+  components:
+  - name: Alien UI Kit
+    description: React component library for Alien miniapps (buttons, layout, surfaces).
+- family: Mini Apps bridge
+  description: Runtime bridge exposing host-app capabilities (payments, notifications, wallet) to embedded mini apps.
+  loader: '@alien-id/miniapps-react'
+  components:
+  - name: MiniApp bridge components
+    description: React bindings over @alien-id/miniapps-bridge for lifecycle, payments, and auth inside the Alien app.
+notes: >-
+  Client-side / embeddable UI surfaces distinct from server SDKs. Grouped by the
+  npm loader library that ships them (see packages/alien-packages.yml).

@@ -1,0 +1,40 @@
+generated: '2026-07-17'
+method: searched
+source: https://docs.alien.org/sso-api-reference/api-reference-core
+docs: https://docs.alien.org/sso-guide/core-integration
+authentication:
+  style: OAuth 2.0 / OpenID Connect (authorization code + PKCE)
+  token_binding: DPoP (RFC 9449, EdDSA) optional, sender-constrained access tokens
+  bearer: 'Authorization: Bearer <access_token> (or DPoP scheme)'
+  ref: authentication/alien-authentication.yml
+authorization_flow:
+  pattern: deep-link + poll
+  steps:
+  - GET /oauth/authorize (response_type=code, response_mode=json, PKCE S256, state, nonce, scope=openid)
+  - POST /oauth/poll (poll authorization status by code; 404 for unknown codes)
+  - POST /oauth/token (exchange code for tokens; 409 invalid_grant after redemption)
+  - GET/POST /oauth/userinfo (Bearer; 401 on expired token triggers refresh)
+  - POST /oauth/token (grant_type=refresh_token to rotate access token)
+token_verification:
+  id_token_alg: RS256
+  jwks: https://sso.alien-api.com/oauth/jwks
+  agent_id_alg: EdDSA (Ed25519) via @alien-id/sso-agent-id
+pagination:
+  documented: false
+idempotency:
+  documented: false
+  note: No idempotency-key contract is documented; OAuth token exchange is single-use by code (409 invalid_grant on replay).
+versioning:
+  api: unversioned OAuth/OIDC endpoints under https://sso.alien-api.com
+  sdk: semver per npm package (see packages/alien-packages.yml)
+error_envelope:
+  format: OAuth 2.0 error responses (RFC 6749) — {error, error_description}
+  ref: errors/alien-problem-types.yml
+discovery:
+  openid_configuration: https://sso.alien-api.com/.well-known/openid-configuration
+  oauth_authorization_server: https://sso.alien-api.com/.well-known/oauth-authorization-server
+notes: >-
+  Cross-cutting semantics for the Alien SSO / Alien ID identity API. The provider
+  documents no request-idempotency header, no cursor/offset pagination, and no
+  custom rate-limit headers; those fields are recorded as not-documented rather
+  than fabricated.

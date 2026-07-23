@@ -1,0 +1,30 @@
+generated: '2026-07-17'
+method: searched
+source: https://docs.alien.org/sso-api-reference/api-reference-core
+format: oauth2
+envelope: '{ error, error_description }  (RFC 6749 OAuth 2.0 error response)'
+problems:
+- status: 404
+  code: not_found
+  title: Unknown polling code
+  detail: POST /oauth/poll returns 404 when the authorization code being polled is unknown or expired.
+  operation: POST /oauth/poll
+- status: 409
+  code: invalid_grant
+  title: Authorization code already redeemed
+  detail: POST /oauth/token returns 409 with invalid_grant when a code has already been exchanged (single-use).
+  operation: POST /oauth/token
+- status: 401
+  code: invalid_token
+  title: Access token expired or invalid
+  detail: GET/POST /oauth/userinfo returns 401 when the access token has expired; SDK auto-refreshes via refresh_token.
+  operation: GET/POST /oauth/userinfo
+- status: 400
+  code: invalid_request
+  title: Invalid or missing authorization parameters
+  detail: Malformed authorize/token requests (missing PKCE, bad response_type) are rejected per OAuth 2.0.
+  operation: GET /oauth/authorize, POST /oauth/token
+notes: >-
+  Derived from documented HTTP status scenarios in the SSO Core API reference.
+  Alien SSO uses standard OAuth 2.0 error responses (error / error_description),
+  not RFC 9457 problem+json.

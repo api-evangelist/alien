@@ -1,0 +1,16 @@
+generated: '2026-07-17'
+method: generated
+source: https://docs.alien.org
+skills:
+- file: alien-sign-in-with-alien-id.md
+  name: Sign in with Alien ID
+  api: https://sso.alien-api.com
+  operations: [GET /oauth/authorize, POST /oauth/poll, POST /oauth/token, GET /oauth/userinfo, GET /oauth/jwks]
+- file: alien-verify-agent-id.md
+  name: Verify an Alien Agent ID
+  api: https://sso.alien-api.com
+  operations: [verify_agent_id_token, GET /oauth/jwks]
+notes: >-
+  Agent Skills grounded in the documented Alien SSO OAuth/OIDC endpoints and the
+  Agent ID verification SDK. No provider-published AGENTS.md/skill files were
+  found (404 across org repos), so these are generated operating instructions.

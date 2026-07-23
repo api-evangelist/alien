@@ -1,0 +1,22 @@
+generated: '2026-07-17'
+method: searched
+source: https://sso.alien-api.com/.well-known/openid-configuration
+docs: https://docs.alien.org/sso-guide/oauth2-clients
+schemes:
+- name: OAuth2
+  source: https://sso.alien-api.com/.well-known/oauth-authorization-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://sso.alien-api.com/oauth/authorize
+    tokenUrl: https://sso.alien-api.com/oauth/token
+scopes:
+- scope: openid
+  description: >-
+    OpenID Connect authentication. Returns a verified, unique-human subject
+    (sub) tied to an Alien ID without exposing name, email, or documents.
+  flows: [authorizationCode]
+  sources: [https://sso.alien-api.com/.well-known/openid-configuration]
+notes: >-
+  The authorization server advertises a single supported scope (openid) in its
+  discovery document (scopes_supported). Alien SSO deliberately minimizes scope
+  surface: it asserts proof-of-humanity, not personal-data claims.

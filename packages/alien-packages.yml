@@ -1,0 +1,117 @@
+generated: '2026-07-17'
+method: searched
+source: https://www.npmjs.com/org/alien-id
+notes: >-
+  Official Alien SSO / Mini Apps / Agent ID client libraries. All npm packages
+  are published under the @alien-id scope from the github.com/alien-id GitHub
+  organization via GitHub Actions (first-party). The Python SDK is a source-only
+  port (not yet on PyPI); the Agent ID CLI ships from the agent-id monorepo.
+packages:
+- language: javascript
+  registry: npm
+  name: '@alien-id/sso'
+  url: https://www.npmjs.com/package/@alien-id/sso
+  install: npm install @alien-id/sso
+  version: 2.0.1
+  repository: https://github.com/alien-id/sso-sdk-js
+  description: Core TypeScript client for Alien SSO authentication (AlienSsoClient).
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/sso-react'
+  url: https://www.npmjs.com/package/@alien-id/sso-react
+  install: npm install @alien-id/sso-react
+  version: 2.1.0
+  repository: https://github.com/alien-id/sso-sdk-js
+  description: React hooks and components for Alien SSO authentication.
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/sso-solana'
+  url: https://www.npmjs.com/package/@alien-id/sso-solana
+  install: npm install @alien-id/sso-solana
+  version: 2.2.1
+  repository: https://github.com/alien-id/sso-sdk-js
+  description: Solana-specific authentication client with on-chain wallet-linking attestations.
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/sso-solana-react'
+  url: https://www.npmjs.com/package/@alien-id/sso-solana-react
+  install: npm install @alien-id/sso-solana-react
+  version: 2.2.1
+  repository: https://github.com/alien-id/sso-sdk-js
+  description: React hooks and components for Alien Solana SSO wallet linking.
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/sso-agent-id'
+  url: https://www.npmjs.com/package/@alien-id/sso-agent-id
+  install: npm install @alien-id/sso-agent-id
+  version: 2.1.2
+  repository: https://github.com/alien-id/sso-sdk-js
+  description: Verify Alien Agent ID tokens (Ed25519 token verification for Node.js services).
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/miniapps-bridge'
+  url: https://www.npmjs.com/package/@alien-id/miniapps-bridge
+  install: npm install @alien-id/miniapps-bridge
+  version: 2.1.1
+  repository: https://github.com/alien-id/miniapp-sdk
+  description: Bridge library for building Alien Mini Apps.
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/miniapps-react'
+  url: https://www.npmjs.com/package/@alien-id/miniapps-react
+  install: npm install @alien-id/miniapps-react
+  version: 2.1.1
+  repository: https://github.com/alien-id/miniapp-sdk
+  description: React bindings for Alien Mini Apps.
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/miniapps-contract'
+  url: https://www.npmjs.com/package/@alien-id/miniapps-contract
+  install: npm install @alien-id/miniapps-contract
+  version: 2.1.1
+  repository: https://github.com/alien-id/miniapp-sdk
+  description: Contract/protocol types for Alien Mini Apps.
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/miniapps-auth-client'
+  url: https://www.npmjs.com/package/@alien-id/miniapps-auth-client
+  install: npm install @alien-id/miniapps-auth-client
+  version: 2.1.1
+  repository: https://github.com/alien-id/miniapp-sdk
+  description: Auth client for Alien Mini Apps.
+  official: true
+- language: javascript
+  registry: npm
+  name: '@alien-id/ui-kit-react'
+  url: https://www.npmjs.com/package/@alien-id/ui-kit-react
+  install: npm install @alien-id/ui-kit-react
+  version: 0.3.0
+  repository: https://github.com/alien-id/ui-kit-react
+  description: UI components for Alien miniapps.
+  official: true
+- language: python
+  registry: github
+  name: alien-sso-sdk
+  url: https://github.com/alien-id/sso-sdk-py
+  install: pip install git+https://github.com/alien-id/sso-sdk-py
+  version: 0.1.0
+  repository: https://github.com/alien-id/sso-sdk-py
+  description: Python SDK for Alien SSO (port of sso-sdk-js). Source-only; not yet published to PyPI.
+  official: true
+- language: javascript
+  registry: github
+  name: alien-agent-id
+  url: https://github.com/alien-id/agent-id
+  install: npx --prefix . alien-agent-id
+  version: 7.0.0
+  repository: https://github.com/alien-id/agent-id
+  description: Agent ID CLI (cryptographic identity for AI agents). Ships from the agent-id monorepo.
+  official: true

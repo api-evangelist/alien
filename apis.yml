@@ -1,9 +1,31 @@
 aid: alien
 name: Alien
-description: 'Alien is a company surfaced as a portfolio company of initialized-capital and added to the
-  API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Alien is a proof-of-humanity protocol with its own Layer 1 blockchain that
+  verifies users are real, unique humans without storing biometrics, documents,
+  or personal data — retaining only cryptographic proofs, hashes, and Merkle
+  roots via its Continuous Human Verification Protocol (CHVP). For developers,
+  Alien ships Alien SSO: a standard OpenID Connect / OAuth 2.0 identity provider
+  (authorization code + PKCE, DPoP-bound tokens) that lets apps offer "Sign in
+  with Alien ID" so users prove personhood without sharing name or email. It also
+  provides Alien Agent ID (Ed25519 cryptographic identity linking AI agents to a
+  verified human owner), a Mini Apps SDK, Solana wallet-linking attestations, and
+  first-party JavaScript/React/Python SDKs plus a CLI. Backed by Initialized
+  Capital.
 url: https://raw.githubusercontent.com/api-evangelist/alien/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://alien.org/favicon.ico
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -16,12 +38,98 @@ modified: '2026-07-17'
 tags:
 - Company
 - Crypto
-apis: []
+- Identity
+- Authentication
+- OAuth
+- OpenID Connect
+- Proof of Humanity
+- Blockchain
+- Solana
+- Agents
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Alien SSO
+  description: >-
+    OpenID Connect / OAuth 2.0 identity provider for proof-of-humanity sign-in.
+    Authorization code + PKCE (S256), refresh tokens, optional DPoP (RFC 9449)
+    sender-constrained tokens, and Agent ID (Ed25519) verification.
+  humanURL: https://docs.alien.org/sso-api-reference/api-reference-core
+  baseURL: https://sso.alien-api.com
+  tags:
+  - Authentication
+  - OAuth
+  - OpenID Connect
+  - Identity
+  properties:
+  - type: Documentation
+    url: https://docs.alien.org/sso-guide/introduction
+  - type: APIReference
+    url: https://docs.alien.org/sso-api-reference/api-reference-core
+  - type: Authentication
+    url: authentication/alien-authentication.yml
+  - type: OAuthScopes
+    url: scopes/alien-scopes.yml
 common:
+- type: DomainSecurity
+  url: security/alien-domain-security.yml
 - type: Website
   url: https://alien.org/
+- type: DeveloperPortal
+  url: https://docs.alien.org
+- type: Documentation
+  url: https://docs.alien.org
+- type: APIReference
+  url: https://docs.alien.org/sso-api-reference/api-reference-core
+- type: GettingStarted
+  url: https://docs.alien.org/sso-guide/introduction
+- type: GitHubOrganization
+  url: https://github.com/alien-id
+- type: Blog
+  url: https://alien.org/blog
+- type: Support
+  url: https://discord.gg/alien
+- type: SignUp
+  url: https://app.alien.org
+- type: TermsOfService
+  url: https://alien.org/legal/terms
+- type: PrivacyPolicy
+  url: https://alien.org/legal/privacy
+- type: Twitter
+  url: https://x.com/alienorg
+- type: Packages
+  url: packages/alien-packages.yml
+- type: SDKs
+  url: packages/alien-packages.yml
+- type: CLI
+  url: cli/alien-cli.yml
+- type: Components
+  url: components/alien-components.yml
+- type: WellKnown
+  url: well-known/alien-well-known.yml
+- type: LLMsTxt
+  url: llms/alien-llms.txt
+- type: Authentication
+  url: authentication/alien-authentication.yml
+- type: OAuthScopes
+  url: scopes/alien-scopes.yml
+- type: Conventions
+  url: conventions/alien-conventions.yml
+- type: Conformance
+  url: conformance/alien-conformance.yml
+- type: ErrorCatalog
+  url: errors/alien-problem-types.yml
+- type: MCPServer
+  url: mcp/alien-mcp.yml
+- type: Lifecycle
+  url: lifecycle/alien-lifecycle.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,32 @@
+generated: '2026-07-17'
+method: derived
+status: candidate
+source: https://docs.alien.org/sso-api-reference/api-reference-core
+server:
+  name: alien
+  transport: http
+  url: null
+tools:
+- name: get_openid_configuration
+  description: Fetch the Alien SSO OpenID Connect discovery document.
+  source_operation: 'GET https://sso.alien-api.com/.well-known/openid-configuration'
+- name: start_authorization
+  description: Begin an authorization-code + PKCE flow and return a deep link / code.
+  source_operation: 'GET https://sso.alien-api.com/oauth/authorize'
+- name: poll_authorization
+  description: Poll the status of a pending authorization by code.
+  source_operation: 'POST https://sso.alien-api.com/oauth/poll'
+- name: exchange_token
+  description: Exchange an authorization code (or refresh token) for tokens.
+  source_operation: 'POST https://sso.alien-api.com/oauth/token'
+- name: get_userinfo
+  description: Retrieve the verified-human subject claims for an access token.
+  source_operation: 'GET https://sso.alien-api.com/oauth/userinfo'
+- name: verify_agent_id_token
+  description: Verify an Alien Agent ID Ed25519 token server-side.
+  source_operation: '@alien-id/sso-agent-id verify'
+notes: >-
+  No official hosted/remote MCP server was found for Alien. This is a CANDIDATE
+  tool list derived from the documented OAuth/OIDC endpoints and the Agent ID
+  verification SDK — a starting point for building an MCP server, not a published
+  provider server.

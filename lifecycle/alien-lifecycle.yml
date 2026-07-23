@@ -1,0 +1,23 @@
+generated: '2026-07-17'
+method: searched
+source: https://docs.alien.org
+versioning:
+  api:
+    scheme: unversioned
+    current: null
+    note: OAuth/OIDC endpoints under https://sso.alien-api.com are not path-versioned; discovery is the contract.
+  sdk:
+    scheme: semver
+    note: Each @alien-id npm package is versioned independently (see packages/alien-packages.yml).
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation/Sunset policy published as of this pass.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  Alien is an early-stage protocol; no status page, SLA, or deprecation policy is
+  published yet. Recorded as absent (valid data) rather than fabricated. No
+  StatusPage or Deprecation pointer is emitted because neither surface exists.

@@ -1,0 +1,28 @@
+generated: '2026-07-17'
+method: searched
+source: https://docs.alien.org/agent-id-cli-reference
+name: Alien Agent ID CLI
+repository: https://github.com/alien-id/agent-id
+description: >-
+  Cryptographic identity for AI agents — bootstrap an Agent ID, bind it to a
+  verified human's Alien ID, sign/verify actions and git commits, manage a
+  credential vault, and make authenticated calls.
+install:
+  note: Ships from the agent-id monorepo; plugin binaries invoked as node plugins/agent-id-<plugin>/bin/cli.mjs
+  bin: alien-agent-id
+plugins:
+- plugin: agent-id-core
+  binary: plugins/agent-id-core/bin/cli.mjs
+  commands: [bootstrap, init, auth, bind, setup-owner-session, refresh, status, sign, verify, export-proof]
+- plugin: agent-id-git
+  binary: plugins/agent-id-git/bin/cli.mjs
+  commands: [setup, commit, verify]
+- plugin: agent-id-vault
+  binary: plugins/agent-id-vault/bin/cli.mjs
+  commands: [store, get, list, remove]
+- plugin: agent-id-auth
+  binary: plugins/agent-id-auth/bin/cli.mjs
+  commands: [header, call, discover, capabilities, support]
+notes: >-
+  Command surface transcribed from the published Agent ID CLI reference. The CLI
+  is plugin-structured (core / git / vault / auth), each with its own binary.

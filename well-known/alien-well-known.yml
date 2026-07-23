@@ -1,0 +1,21 @@
+generated: '2026-07-17'
+method: searched
+source: https://sso.alien-api.com/.well-known/
+host: https://sso.alien-api.com
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: alien-openid-configuration.json
+  note: OpenID Connect discovery document (issuer https://sso.alien-api.com)
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: alien-oauth-authorization-server.json
+  note: OAuth 2.0 Authorization Server Metadata (RFC 8414)
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+  host: https://alien.org
+- path: /.well-known/ai-plugin.json
+  status: 404
+  host: https://alien.org

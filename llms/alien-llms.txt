@@ -1,0 +1,79 @@
+# Alien Developer Documentation
+
+> Official documentation for integrating with the Alien Network - including SSO authentication, Solana integration, and Miniapps development.
+
+## Overview
+
+- [Build with Proof of Humanity APIs | Alien Docs](https://docs.alien.org/index.md): Everything you need to integrate Alien ID into your app. React SDK, SSO guides, Mini App APIs and Solana integration.
+
+## Core Concepts
+
+- [What is an Alien Session? | Alien Docs](https://docs.alien.org/what-is-alien-session.md): An Alien Session is a verified, user-scoped token tied to an Alien ID. Learn how sessions work and how to validate them.
+- [What is an Alien Provider? | Alien Docs](https://docs.alien.org/what-is-alien-provider.md): An Alien Provider is your app identity in the Alien Network. Learn how to create and configure a Provider for SSO or Mini Apps.
+
+## SSO SDK Guide
+
+- [Sign In with Verified Human Identity | Alien SSO Docs](https://docs.alien.org/sso-guide/introduction.md): Introduction to Alien SSO: let users sign into your app with a verified, unique human identity instead of email or social login.
+- [SSO React Frontend Integration | Alien Docs](https://docs.alien.org/sso-guide/react-integration.md): Add Alien sign-in to your React app with AlienSsoProvider, useAuth and SignInButton. Quick start, token refresh and full code examples.
+- [SSO Core Integration with AlienSsoClient | Alien Docs](https://docs.alien.org/sso-guide/core-integration.md): Integrate Alien SSO into any JavaScript or TypeScript project with AlienSsoClient. Deep links, polling, token exchange and refresh.
+- [OAuth2 Client Integration with Alien SSO | Alien Docs](https://docs.alien.org/sso-guide/oauth2-clients.md): Use any standard OAuth 2.0 or OpenID Connect library to integrate with Alien SSO. OIDC-compliant identity provider setup.
+
+## SSO SDK API Reference
+
+- [SSO Core API Reference | Alien Docs](https://docs.alien.org/sso-api-reference/api-reference-core.md): Complete API reference for @alien-id/sso: AlienSsoClient methods, configuration, token storage, DPoP and TypeScript types.
+- [SSO React API Reference | Alien Docs](https://docs.alien.org/sso-api-reference/api-reference-react.md): Complete API reference for @alien-id/sso-react: AlienSsoProvider, the useAuth hook, components and Agent Mode.
+
+## SSO Demo
+
+- [SSO Demo App - Alien Docs](https://docs.alien.org/sso-demo-app.md): Explore a complete working example of Alien SSO integration in a React application. Live demo and source code.
+
+## Solana SSO SDK Guide
+
+- [Human-Verified Identity for Solana Apps | Alien Docs](https://docs.alien.org/solana-sso-guide/introduction.md): Introduction to Alien Solana SSO: link Solana wallets to verified human Alien IDs with on-chain attestations.
+- [Solana SSO React Integration Guide | Alien Docs](https://docs.alien.org/solana-sso-guide/react-integration.md): Integrate Alien Solana SSO wallet linking into React apps with wallet adapters. Provider setup, hooks and full code examples.
+- [Solana SSO Core Integration Guide | Alien Docs](https://docs.alien.org/solana-sso-guide/core-integration.md): Integrate Alien Solana SSO wallet linking into any JavaScript or TypeScript project using the core SDK.
+
+## Solana SSO SDK API Reference
+
+- [Solana SSO Core API Reference | Alien Docs](https://docs.alien.org/solana-sso-api-reference/api-reference-core.md): Complete API reference for @alien-id/sso-solana: AlienSolanaSsoClient methods, PDA derivation utilities, types, and on-chain programs.
+- [Solana SSO React API Reference | Alien Docs](https://docs.alien.org/solana-sso-api-reference/api-reference-react.md): Complete API reference for @alien-id/sso-solana-react: AlienSolanaSsoProvider, the useSolanaAuth hook, and sign-in components.
+
+## Solana SSO Demo
+
+- [Solana SSO Demo App - Alien Docs](https://docs.alien.org/solana-sso-demo-app.md): Explore a complete working example of Alien Solana SSO integration in a React application. Live demo and source code.
+
+## Quickstart
+
+- [Install the Alien Mini App Boilerplate | Alien Docs](https://docs.alien.org/quickstart/install-boilerplate.md): Clone and configure the Alien Mini App boilerplate to start building with proof-of-humanity verification in minutes.
+- [Create a Mini App on the Alien Network | Alien Docs](https://docs.alien.org/quickstart/create-miniapp.md): Step-by-step guide to building a Mini App on the Alien Network. Access the Developer Portal, configure your app and go live.
+- [Test Your Alien Mini App Locally and In-App | Alien Docs](https://docs.alien.org/quickstart/testing.md): How to test your Alien Mini App locally and inside the Alien app before going live.
+
+## React SDK
+
+- [React SDK Overview and Installation | Alien Docs](https://docs.alien.org/react-sdk/index.md): Install and configure the Alien React SDK. Access authentication, payments, bridge, clipboard and lifecycle hooks.
+- [App Lifecycle - Alien React SDK | Alien Docs](https://docs.alien.org/react-sdk/lifecycle.md): Manage your Mini App lifecycle inside the Alien app. Ready signal, visibility changes and WebView coordination.
+- [Safe Area Insets - Alien React SDK | Alien Docs](https://docs.alien.org/react-sdk/safe-area.md): Handle mobile safe area insets in your Alien Mini App. CSS variables and React hook for top, bottom, left and right insets.
+- [Proof-of-Humanity Authentication in React | Alien Docs](https://docs.alien.org/react-sdk/auth.md): Implement proof-of-humanity authentication in React. Frontend setup, backend verification and session management.
+- [Aliencoin Payments in React SDK | Alien Docs](https://docs.alien.org/react-sdk/payments.md): Accept Aliencoin payments in your Mini App. Overview, prerequisites and full payment flow implementation.
+- [Clipboard Access - Alien React SDK | Alien Docs](https://docs.alien.org/react-sdk/clipboard.md): Access the native clipboard from your Alien Mini App. Copy and read text reliably across iOS and Android WebViews.
+- [Haptic Feedback - Alien React SDK | Alien Docs](https://docs.alien.org/react-sdk/haptic.md): Trigger native haptic feedback in your Alien Mini App. Tactile responses for taps, success confirmations and selections.
+- [Link Management - Alien React SDK | Alien Docs](https://docs.alien.org/react-sdk/links.md): Handle external links in your Alien Mini App. Route clicks through the host app to open URLs in the system browser.
+- [Push Notifications - Alien React SDK | Alien Docs](https://docs.alien.org/react-sdk/notifications.md): Request push-notification permission, send pushes from your Mini App backend through the Alien Notification Service, and verify status webhooks.
+- [Solana Wallet Provider - Alien React SDK | Alien Docs](https://docs.alien.org/react-sdk/solana-provider.md): Wallet-standard compatible Solana provider for Alien Mini Apps. Sign transactions using the host app wallet.
+- [React SDK Bridge Reference | Alien Docs](https://docs.alien.org/react-sdk/bridge.md): Core bridge functions for communicating between your Mini App and the Alien native app. Installation and API reference.
+
+## Migration
+
+- [Upgrade to v2 (Callability) | Alien Docs](https://docs.alien.org/migration/v2.md): Migrate your Alien Mini App to miniapps SDK 2.1. The supported→callable rename, useCallable, the unified error model and the new APIs.
+
+## Agent ID
+
+- [Introduction to Alien Agent ID | Alien Docs](https://docs.alien.org/agent-id-guide/introduction.md): Cryptographic identity for AI agents linked to verified human owners via Alien SSO. Ed25519 keypairs, DPoP-bound owner sessions, and SSH-signed git commits.
+- [Agent ID Quick Start | Alien Docs](https://docs.alien.org/agent-id-guide/quick-start.md): Get started with Alien Agent ID. Install the plugins, bootstrap an identity bound to your Alien account, and sign your first commit.
+- [Agent ID Credential Vault | Alien Docs](https://docs.alien.org/agent-id-guide/credential-vault.md): Encrypted storage for external service credentials. Agent-scoped vault using Ed25519 key derivation.
+- [Agent ID Session Refresh | Alien Docs](https://docs.alien.org/agent-id-guide/session-refresh.md): Renew agent SSO tokens without human interaction. Transparent and explicit refresh flows for long-running agents.
+- [Agent ID Git Commit Signing | Alien Docs](https://docs.alien.org/agent-id-use-cases/git-signing.md): SSH-sign git commits with Agent ID. Provenance trailers and v3 bundles in git notes for verifiable AI agent contributions.
+- [Agent ID Service Authentication | Alien Docs](https://docs.alien.org/agent-id-use-cases/external-services.md): Two authentication models for AI agents: RFC 9449 DPoP for Alien-aware services and vault credentials for external APIs.
+- [Integrate Agent SSO | Alien Docs](https://docs.alien.org/agent-id-service-integration.md): Accept AI agents on your web service with RFC 9449 DPoP. Verify SSO-issued, agent-bound access tokens with @alien-id/sso-agent-id — no API keys, no shared secrets, no pre-registration.
+- [Agent ID CLI Reference | Alien Docs](https://docs.alien.org/agent-id-cli-reference.md): Complete reference for the Alien Agent ID plugin CLIs: agent-id-core, agent-id-git, agent-id-vault, and agent-id-auth. All commands, flags, and output shapes.
+- [Agent ID Demo App - Alien Docs](https://docs.alien.org/agent-id-demo-app.md): A working Next.js demo where AI agents authenticate with RFC 9449 DPoP and post to a Reddit-like community. Source code and run instructions.
