@@ -40,6 +40,16 @@ tags:
 - Crypto
 - Identity
 - Authentication
+- OpenID Connect
+- Proof of Humanity
+- Blockchain
+- Solana
+- Agents
+tags_raw:
+- Company
+- Crypto
+- Identity
+- Authentication
 - OAuth
 - OpenID Connect
 - Proof of Humanity
@@ -60,6 +70,10 @@ apis:
   humanURL: https://docs.alien.org/sso-api-reference/api-reference-core
   baseURL: https://sso.alien-api.com
   tags:
+  - Authentication
+  - OpenID Connect
+  - Identity
+  tags_raw:
   - Authentication
   - OAuth
   - OpenID Connect
