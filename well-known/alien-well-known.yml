@@ -2,20 +2,25 @@ generated: '2026-07-17'
 method: searched
 source: https://sso.alien-api.com/.well-known/
 host: https://sso.alien-api.com
-documents:
-- path: /.well-known/openid-configuration
-  status: 200
-  file: alien-openid-configuration.json
-  note: OpenID Connect discovery document (issuer https://sso.alien-api.com)
-- path: /.well-known/oauth-authorization-server
-  status: 200
-  file: alien-oauth-authorization-server.json
-  note: OAuth 2.0 Authorization Server Metadata (RFC 8414)
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-  host: https://alien.org
-- path: /.well-known/ai-plugin.json
-  status: 404
-  host: https://alien.org
+hosts:
+- host: https://sso.alien-api.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: alien-openid-configuration.json
+    note: OpenID Connect discovery document (issuer https://sso.alien-api.com)
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: alien-oauth-authorization-server.json
+    note: OAuth 2.0 Authorization Server Metadata (RFC 8414)
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
