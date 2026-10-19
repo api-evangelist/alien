@@ -1,0 +1,130 @@
+edges:
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@alien-id/miniapps-auth-client
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@alien-id/miniapps-auth-client'
+      version: 2.1.1
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/miniapps-auth-client
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/miniapps-bridge'
+      version: 2.1.1
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/miniapps-bridge
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/miniapps-contract'
+      version: 2.1.1
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/miniapps-contract
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/miniapps-react'
+      version: 2.1.1
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/miniapps-react
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/sso'
+      version: 2.0.1
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/sso
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/sso-agent-id'
+      version: 2.1.2
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/sso-agent-id
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/sso-react'
+      version: 2.1.0
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/sso-react
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/sso-solana'
+      version: 2.2.1
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/sso-solana
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/sso-solana-react'
+      version: 2.2.1
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/sso-solana-react
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    - name: '@alien-id/ui-kit-react'
+      version: 0.3.0
+      released: '2026-06-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@alien-id/ui-kit-react
+      repo_leg: github-org:alien-id
+      publisher_leg: org:alien-id
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+generated: '2026-10-18'
+method: searched
+source:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
+checked:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
